@@ -1,0 +1,12 @@
+def factorial(n):
+    if n == 0:
+        n = 1
+        return n
+    else:
+        for r in range(1,n):
+            n *= r
+        return n
+e=0
+for i in range(0,30):
+    e+=1/factorial(i)
+print("La estimación del numero de euler es:",e)

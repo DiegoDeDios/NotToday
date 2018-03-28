@@ -1,21 +1,23 @@
-package RepasoExamen2.MasGUI;
+package programacionorientada;
 
 import java.awt.BorderLayout;
+import java.awt.Graphics;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 public class Ventana extends JFrame {
-	public Ventana(){
-		super("Bienvenido");
+
+	public Ventana (){
+		super("Mi primera ventana en Java");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		Menu menu= new Menu();
-		this.add(new Datos(menu));
-		this.add(menu,BorderLayout.EAST);
-		this.pack();
+		PanelDibujo pd= new PanelDibujo();
+		this.add(pd);
+		this.add(new PanelControles(pd),BorderLayout.WEST);
+		this.pack(); 
 		this.setVisible(true);
 	}
 	public static void main(String[] args) {
-		Ventana window= new Ventana();
+		Ventana win = new Ventana();
 
 	}
 
